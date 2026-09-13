@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NoteFlow — Your Notes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <span>NoteFlow</span>
+            </div>
+
+            <nav>
+                <button class="nav-item active">
+                    <span>▦</span>
+                    All Notes
+                </button>
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="aws-badge">
+                    <div class="aws-dot"></div>
+
+                    <div>
+                        <strong>Serverless</strong>
+                        <small>AWS powered</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div class="mobile-brand">
+                    <div class="brand-icon">✦</div>
+                    <span>NoteFlow</span>
+                </div>
+
+                <div class="search-box">
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search your notes..."
+                    >
+
+                    <kbd>⌘ K</kbd>
+                </div>
+
+                <div class="top-actions">
+
+                
+                    <button
+                        class="new-note-button"
+                        id="newNoteButton"
+                    >
+                        <span>+</span>
+                        New note
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTENT -->
+            <section class="content">
+
+                <div class="welcome">
+
+                    <div>
+                        <p class="eyebrow">
+                            YOUR WORKSPACE
+                        </p>
+
+                        <h1>
+                            Your thoughts,<br>
+                            <span>organized.</span>
+                        </h1>
+                    </div>
+
+                    <div class="note-count">
+                        <strong id="noteCount">0</strong>
+                        <span>notes</span>
+                    </div>
+
+                </div>
+
+
+                <!-- NOTES -->
+                <div
+                    id="notesContainer"
+                    class="notes-grid"
+                ></div>
+
+
+                <!-- EMPTY STATE -->
+                <div
+                    id="emptyState"
+                    class="empty-state"
+                >
+
+                    <div class="empty-icon">
+                        ✦
+                    </div>
+
+                    <h2>
+                        No notes yet
+                    </h2>
+
+                    <p>
+                        Create your first note and start capturing your ideas.
+                    </p>
+
+                    <button
+                        class="new-note-button"
+                        id="emptyCreateButton"
+                    >
+                        + Create your first note
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- CREATE NOTE MODAL -->
+    <div
+        class="modal-overlay"
+        id="modalOverlay"
+    >
+
+        <div class="modal">
+
+            <div class="modal-header">
+
+                <div>
+                    <p class="eyebrow">
+                        NEW NOTE
+                    </p>
+
+                    <h2>
+                        Create a note
+                    </h2>
+                </div>
+
+                <button
+                    class="close-button"
+                    id="closeModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="noteForm">
+
+                <label>
+
+                    Title
+
+                    <input
+                        type="text"
+                        id="titleInput"
+                        placeholder="Give your note a title..."
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Content
+
+                    <textarea
+                        id="contentInput"
+                        placeholder="Write something..."
+                        rows="7"
+                        required
+                    ></textarea>
+
+                </label>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-button"
+                        id="cancelButton"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="new-note-button"
+                    >
+                        Create note
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div
+        id="toast"
+        class="toast"
+    ></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
