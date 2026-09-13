@@ -1,4 +1,7 @@
-# AWS Serverless Notes App 🚀
+# AWS Serverless Notes App 
+## 🌐 Live Demo
+
+👉 [Open NoteFlow](http://akshay-noteflow-2026.s3-website-us-east-1.amazonaws.com/)
 
 A simple serverless Notes application built using AWS services.
 
@@ -81,6 +84,6 @@ aws-serverless-notes-app/
 │   └── lambda_function.py
 │
 ├── architecture/
-│   └── architecture.png
+│   └── aws crud architecture.png
 │
 └── README.md
